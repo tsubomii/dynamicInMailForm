@@ -1,0 +1,13 @@
+<!--here topMessage, bottomMessage, labelRight, labelLeft, label are metadata computed from uiConfig pass down
+from dialog level component
+-->
+<div>{{topMessage}}</div>
+{{#if labelLeft}}
+  <label>{{label}}</label>
+{{/if}}
+<input type=text value={{value}} onInput={{action (mut value) value="target.value"}}>
+{{#if labelRight}}
+  <label>{{label}}</label>
+{{/if}}
+<div>{{bottomMessage}}</div>
+<a href={{bottomLink}}>learn link</a>

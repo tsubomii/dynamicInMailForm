@@ -1,5 +1,6 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<!-- iterate through array of possible custom component, only render the one is list in UI metadata -->
+{{#each this.uiConfigs as |uiConfig|}}
+  {{#if uiConfig.shouldRender}}
+    {{component uiConfig.uiType uiConfigs=uiConfig}}
+  {{/if}}
+{{/each}}

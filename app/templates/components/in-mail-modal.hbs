@@ -1,0 +1,4 @@
+<!-- render every component inside field config and pass its configuration down -->
+{{#each this.fields as |uiConfig|}}
+  {{component uiConfig.uiType uiConfig=uiConfig}}
+{{/each}}
