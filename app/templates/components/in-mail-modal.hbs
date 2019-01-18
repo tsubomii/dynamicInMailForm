@@ -1,4 +1,5 @@
 <!-- render every component inside field config and pass its configuration down -->
 {{#each this.fields as |uiConfig|}}
+<!--Note here uiConfig param is only for metadata, the actual value of component can be pass down as uiData object -->
   {{component uiConfig.uiType uiConfig=uiConfig}}
 {{/each}}

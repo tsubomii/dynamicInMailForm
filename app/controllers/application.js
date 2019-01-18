@@ -22,6 +22,7 @@ export default Controller.extend({
     const mockMetaData = {
       'form-userdetail-inMail': {
         uiType: 'in-mail-modal',//can be actual component name, use form as placeholder
+        attributeId: '122',
         fields: [{
           attributeId: '123',  //this attribute id maps to backend attributeId
           dataType: 'string',  //data type of custom property
